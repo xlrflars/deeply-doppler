@@ -1,0 +1,24 @@
+---
+import "../styles/global.scss";
+import { SiteTitle } from "../consts";
+---
+
+<header>
+  <nav>
+    <h2 id="site_title">
+      <a href="/">
+        {SiteTitle}
+      </a>
+    </h2>
+
+    <div class="links">
+      <a href="mailto:contactus@yourwebsite.com" class="custom-link">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .links a {
+    text-decoration: none;
+  }
+</style>
