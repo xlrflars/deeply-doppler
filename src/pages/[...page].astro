@@ -14,7 +14,7 @@ export async function getStaticPaths({
   posts.sort((a, b) => +b.data.date - +a.data.date);
 
   return paginate(posts, {
-    pageSize: 1,
+    pageSize: 2,
   });
 }
 
@@ -23,7 +23,7 @@ const { page } = Astro.props;
 
 <Layout>
   <main>
-    <h1 class="page_title">Latest Blog Posts</h1>
+    <h1 class="page_title">Blog Posts</h1>
 
     <hr class="border-b" style="border-bottom:  1px solid rgb(31,  32,  35);" />
     <ul class="posts" transition:name="post">
