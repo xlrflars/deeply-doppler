@@ -1,5 +1,5 @@
 {
-  "name": "deeply-doppler",
+  "name": "visible-visual",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,14 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/check": "^0.5.3",
     "@philnash/astro-pagination": "^0.4.0",
-    "astro": "^4.3.2",
-    "tailwindcss": "^3.4.1",
+    "astro": "^4.3.6",
+    "sass": "^1.69.5",
+    "sharp": "^0.32.6",
     "typescript": "^5.3.3"
-  },
-  "devDependencies": {
-    "sass": "^1.70.0"
   }
 }

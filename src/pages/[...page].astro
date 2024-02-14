@@ -2,10 +2,8 @@
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "../layouts/IndexLayout.astro";
-import "../styles/layout.scss";
-import Pagination from "../components/pagination.astro";
+import Pagination from "@philnash/astro-pagination";
 import type { PaginateFunction } from "astro";
-
 
 export async function getStaticPaths({
   paginate,
@@ -16,35 +14,33 @@ export async function getStaticPaths({
   posts.sort((a, b) => +b.data.date - +a.data.date);
 
   return paginate(posts, {
-    pageSize: 2,
+    pageSize: 1,
   });
 }
-const posts = await getCollection("releases");
-posts.sort((a, b) => +b.data.date - +a.data.date);
 
 const { page } = Astro.props;
 ---
 
 <Layout>
   <main>
-    <h1 class="page_title">Whats New? ⭐⋆˙</h1>
+    <h1 class="page_title">Latest Blog Posts</h1>
+
     <hr class="border-b" style="border-bottom:  1px solid rgb(31,  32,  35);" />
     <ul class="posts" transition:name="post">
       {
-        page.data.map((post) => (
+        page.data.map((post: any) => (
           <li class="post">
             <div class="version_wrapper">
               <div class="version_info">
                 <a href={`/releases/${post.slug}`}>
-                  <div class="version_number" style="font-size: large;">
-                    {post.data.versionNumber}
+                  <div class="version_number">
+                    <FormattedDate class="date" date={post.data.date} />
                   </div>
-                  <FormattedDate class="date" date={post.data.date} />
                 </a>
               </div>
             </div>
             <div class="content">
-              {post.render().then(({ Content }) => (
+              {post.render().then(({ Content }: any) => (
                 <Content />
               ))}
             </div>
@@ -53,11 +49,7 @@ const { page } = Astro.props;
       }
     </ul>
     <div class="pagination-container">
-        <Pagination page={page} urlPattern="/{}"  showPrevNext={false}/>
-      
+      <Pagination page={page} urlPattern="/{}" showPrevNext={false} />
     </div>
-   
-      
-    
   </main>
 </Layout>

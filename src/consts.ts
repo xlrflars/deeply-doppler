@@ -1,2 +1,2 @@
-export const SiteTitle = 'Secomea';
+export const SiteTitle = 'My Blog';
 export const SiteDescription = 'Welcome to my website!';
