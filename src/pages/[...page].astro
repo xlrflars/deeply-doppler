@@ -4,10 +4,8 @@ import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "../layouts/IndexLayout.astro";
 import "../styles/layout.scss";
 import Pagination from "../components/pagination.astro";
+import type { PaginateFunction } from "astro";
 
-interface PaginateFunction {
-  (posts: Array<any>, options: { pageSize: number }): Promise<Array<any>>;
-}
 
 export async function getStaticPaths({
   paginate,
@@ -21,13 +19,15 @@ export async function getStaticPaths({
     pageSize: 2,
   });
 }
+const posts = await getCollection("releases");
+posts.sort((a, b) => +b.data.date - +a.data.date);
 
 const { page } = Astro.props;
 ---
 
 <Layout>
   <main>
-    <h1 class="page_title">Product Updates</h1>
+    <h1 class="page_title">Whats New? ⭐⋆˙</h1>
     <hr class="border-b" style="border-bottom:  1px solid rgb(31,  32,  35);" />
     <ul class="posts" transition:name="post">
       {
@@ -52,13 +52,12 @@ const { page } = Astro.props;
         ))
       }
     </ul>
-    <div>
-      <Pagination
-        prevUrl={page.url.prev}
-        nextUrl={page.url.next}
-        totalPages={page.url.totalPages}
-        currentPage={page.url.currentPage}
-      />
+    <div class="pagination-container">
+        <Pagination page={page} urlPattern="/{}"  showPrevNext={false}/>
+      
     </div>
+   
+      
+    
   </main>
 </Layout>

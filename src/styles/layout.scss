@@ -301,38 +301,30 @@ nav {
 }
 
 footer {
-    display: flex;
+display: flex;
     padding: 2em 0;
 
 
 
 
-    @media (max-width: $tablet) {
+@media (max-width: $tablet) {
         padding: 1em 0;
     }
 
-    color: #808080;
-    align-items: center;
-    justify-content:space-around;
-    border-top: 1px solid color(gray, 100);
+color: #808080;
+align-items: center;
+justify-content:space-around;
+border-top: 1px solid color(gray, 100);
 
-    @media (prefers-color-scheme: dark) {
-        border-color: color(gray, 900);
-    }
+@media (prefers-color-scheme: dark) {
+    border-color: color(gray, 900);
 
-    a {
-        margin-left: 1em;
-        color: color(gray, 500);
-        text-decoration: none;
-
-        &:hover {
-            color: color(gray, 500);
-            opacity: 0.6;
-        }
-    }
+}
 
 
 }
+
+
 
 .github-section {
     display: flex;
@@ -345,34 +337,38 @@ footer {
 
 }
 
-.pagenationbtn {
-    padding: 3px 5px;
 
-    text-decoration: none;
-    border: 1px solid black;
-    border-radius: 50px;
+
+.pagination-container {
+    text-align: center;
+    width: 100%;
+    }
+
+.pagination-container nav {
+    width: 100%;
+    justify-content: center;
+}
+
+nav ul li {
+    border-radius: 10px;
     background-color: #DFDDD7;
-
-    margin: 30px;
-    display: inline-block;
-    min-width: 100px;
-    text-align: center;
-
-}
-
-.pagenationNumber {
-    padding: 3px 5px;
-    text-decoration: none;
+    border-color: black;
     margin: 5px;
-    display: inline-block;
+        min-width: 40px;
+            display: inline-flex;
+            min-height: 50px;
     text-align: center;
+    justify-content: center;
+        align-items: center;
+        color: rgb(20, 20, 190);
+    
+        em {
+                color: black;
+            }
+        }
 
-    @media (prefers-color-scheme: dark) {
-        color: #478589;
-    }
-
-    @media (prefers-color-scheme: light) {
-        color: #1252b1;
-    }
+nav ul li:hover {
+    background-color: #8f8c84;
 
 }
+

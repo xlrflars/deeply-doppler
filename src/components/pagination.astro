@@ -1,31 +1,12 @@
 ---
-import "../styles/global.scss";
+import Pagination from "@philnash/astro-pagination";
 
-const { prevUrl, nextUrl, totalPages, currentPage } = Astro.props;
+export async function getStaticPaths({ paginate }) {
+}
+const { page } = Astro.props;
 ---
 
-<nav aria-label="Blog pages" style="justify-content: center;">
-  {
-    prevUrl && (
-      <div>
-        <a href={prevUrl} class="pagenationbtn" style="color:black">
-          previus
-        </a>
-      </div>
-    )
-  }
-  <div>
-    <a href={"/"} class="pagenationNumber"> 1</a>
-    <a href={"/2"} class="pagenationNumber"> 2</a>
-    <a href={"/3"} class="pagenationNumber"> 3</a>
-  </div>
-  {
-    nextUrl && (
-      <div>
-        <a href={nextUrl} class="pagenationbtn" style="color:black">
-          Next
-        </a>
-      </div>
-    )
-  }
-</nav>
+{/* render the items from the page */}
+
+<Pagination page={page} urlPattern="/{}" showPrevNext={false}/>
+
