@@ -375,3 +375,10 @@ nav[role="navigation"] ul li span.end-ellipsis {
 	color: #ffffff;
 	margin-right: 0;
 }
+.settingBtn {
+	display: inline-block;
+	font-family: $codeFont;
+	padding: 10px 10px;
+	background-color: lightblue;
+	border-radius: 8px;
+}
