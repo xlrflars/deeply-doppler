@@ -1,0 +1,44 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import Layout from "../layouts/IndexLayout.astro";
+
+const { page } = Astro.props;
+---
+
+<Layout>
+  <main>
+    <h1 class="page_title">About my blog</h1>
+
+    <div class="content">
+      <hr
+        class="border-b"
+        style="border-bottom:  1px solid rgb(31,  32,  35);"
+      />
+      <h5 style="font-weight: 300;">
+        Welcome to my blog, dedicated to the art and science of website design.
+        Here, I delve into the intricacies of creating compelling and functional
+        digital spaces. As a student of this craft, I'm committed to honing my
+        skills and staying at the forefront of design trends. Through my
+        writings, I hope to inspire others to embrace the transformative power
+        of good design and to share my journey of constant learning and
+        improvement. Join me as we explore the intersection of aesthetics and
+        functionality, where every pixel tells a story.
+      </h5>
+      <h5>Design Delights: A List of Joyful Website Creation Moments!</h5>
+      <ul>
+        <li>Creating visually stunning interfaces</li>
+        <li>Enhancing user experience with intuitive navigation</li>
+        <li>Optimizing for mobile devices to reach wider audiences</li>
+        <li>Implementing responsive designs that adapt to screen sizes</li>
+        <li>Using animations and transitions to engage users</li>
+        <li>Integrating interactive elements to boost engagement</li>
+        <li>Applying accessibility practices to ensure inclusivity</li>
+        <li>Leveraging modern technologies like CSS Grid and Flexbox</li>
+        <li>Collaborating with developers to bring designs to life</li>
+        <li>
+          Staying updated with the latest design trends and best practices
+        </li>
+      </ul>
+    </div>
+  </main>
+</Layout>

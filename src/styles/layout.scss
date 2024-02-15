@@ -103,17 +103,17 @@ nav {
 	#site_title a {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 7px;
 		color: color(gray, 950);
-		@media (prefers-color-scheme: dark) {
-			color: $white;
-		}
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 700;
 		letter-spacing: 2px;
 		line-height: 1;
 		text-decoration: none;
 		text-transform: uppercase;
+		@media (prefers-color-scheme: dark) {
+				color: $white;
+			}
 	}
 	.links a {
 		margin-left: 1em;
