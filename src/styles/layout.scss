@@ -18,9 +18,9 @@ body {
 		}
 		
 		@media (prefers-color-scheme: light) {
-			background: rgb(226, 204, 181);
-			background: linear-gradient(337deg, rgba(226, 204, 181, 1) 2%, rgba(203, 203, 203, 1) 59%, rgba(226, 204, 181, 1) 83%);
-	}
+			background: rgb(183, 204, 254);
+				background: linear-gradient(337deg, rgba(183, 204, 254, 1) 4%, rgba(194, 252, 252, 1) 27%, rgba(210, 201, 221, 1) 72%, rgba(194, 252, 252, 1) 100%);
+			}
 	@media (max-width: $tablet) {
 		font-size: 16px;
 	}
@@ -216,7 +216,7 @@ nav {
 	display: inline-block;
 	font-family: $codeFont;
 	line-height: 1;
-	margin-bottom: 8px;
+	margin: 8px;
 	padding: 20px 15px;
 	color: $white;
 	@media (prefers-color-scheme: dark) {
@@ -225,9 +225,8 @@ nav {
 		}
 	
 		@media (prefers-color-scheme: light) {
-			background: rgb(0, 0, 0);
-			background: linear-gradient(164deg, rgb(188, 49, 49) 0%, rgba(13, 52, 79, 1) 34%, rgba(68, 14, 58, 1) 70%, rgba(0, 0, 0, 1) 100%);
-	
+			background: rgb(255, 154, 73);
+				background: linear-gradient(337deg, rgba(255, 154, 73, 0.438521270324536) 4%, rgba(0, 122, 156, 0.8082691694841999) 27%, rgba(137, 44, 255, 0.8642915784477854) 72%, rgba(241, 181, 43, 0.5981851358707546) 100%);
 		}
 	border-radius: 8px;
 }
